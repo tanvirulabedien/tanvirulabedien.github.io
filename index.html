@@ -8,18 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy:    #0b1f3a;
-      --navy2:   #122848;
-      --navy3:   #1a3560;
-      --gold:    #d4a017;
-      --gold2:   #f0c040;
-      --gold3:   #fde68a;
-      --cream:   #fdf8f0;
+      --navy:    #1a1a1a;
+      --navy2:   #2a2a2a;
+      --navy3:   #3a3a3a;
+      --gold:    #c0392b;
+      --gold2:   #e74c3c;
+      --gold3:   #fadbd8;
+      --cream:   #ffffff;
       --white:   #ffffff;
-      --text:    #1a1208;
-      --muted:   #5a6e85;
-      --border:  #c8b97a;
-      --light:   #eef2f7;
+      --text:    #1a1a1a;
+      --muted:   #666666;
+      --border:  #e0e0e0;
+      --light:   #f7f7f7;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,8 +35,8 @@
 
     /* ── MARQUEE ── */
     .marquee-strip {
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
       font-weight: 500;
@@ -110,7 +110,7 @@
 
     /* ── HERO ── */
     #hero {
-      background: var(--navy);
+      background: var(--white);
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -124,7 +124,7 @@
       position: absolute;
       width: 600px; height: 600px;
       border-radius: 50%;
-      border: 1px solid rgba(212,160,23,0.12);
+      border: 1px solid rgba(192,57,43,0.08);
       top: -100px; right: -80px;
       pointer-events: none;
     }
@@ -134,7 +134,7 @@
       position: absolute;
       width: 400px; height: 400px;
       border-radius: 50%;
-      border: 1px solid rgba(212,160,23,0.08);
+      border: 1px solid rgba(192,57,43,0.05);
       top: 60px; right: 60px;
       pointer-events: none;
     }
@@ -146,6 +146,7 @@
       justify-content: center;
       position: relative;
       z-index: 1;
+      background: var(--white);
     }
 
     .hero-eyebrow {
@@ -156,7 +157,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold2);
+      color: var(--gold);
       margin-bottom: 1.8rem;
       animation: fadeUp 0.7s ease both;
     }
@@ -172,7 +173,7 @@
       font-size: clamp(3.2rem, 6vw, 6rem);
       font-weight: 900;
       line-height: 1.0;
-      color: var(--white);
+      color: var(--navy);
       margin-bottom: 1rem;
       letter-spacing: -0.01em;
       animation: fadeUp 0.7s 0.1s ease both;
@@ -180,7 +181,7 @@
 
     h1 em {
       font-style: italic;
-      color: var(--gold2);
+      color: var(--gold);
     }
 
     .hero-divider {
@@ -194,7 +195,7 @@
     .hero-tagline {
       font-size: 1.05rem;
       font-weight: 300;
-      color: rgba(255,255,255,0.7);
+      color: var(--muted);
       max-width: 440px;
       margin-bottom: 2rem;
       line-height: 1.75;
@@ -208,13 +209,13 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.67rem;
       letter-spacing: 0.06em;
-      color: rgba(255,255,255,0.45);
+      color: var(--muted);
       margin-bottom: 2rem;
       animation: fadeUp 0.7s 0.3s ease both;
     }
 
     .hero-meta a {
-      color: var(--gold3);
+      color: var(--gold);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -234,16 +235,16 @@
       font-size: 0.65rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold2);
+      color: var(--gold);
       text-decoration: none;
-      border-bottom: 1px solid rgba(212,160,23,0.35);
+      border-bottom: 1px solid rgba(192,57,43,0.35);
       padding-bottom: 2px;
       transition: all 0.2s;
     }
 
     .scholar-link:hover {
-      color: var(--white);
-      border-bottom-color: var(--white);
+      color: var(--navy);
+      border-bottom-color: var(--navy);
     }
 
     .hero-cta {
@@ -280,19 +281,19 @@
 
     .btn-outline-white {
       background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--navy);
+      border: 2px solid var(--navy);
     }
 
     .btn-outline-white:hover {
-      border-color: var(--gold2);
-      color: var(--gold2);
+      border-color: var(--gold);
+      color: var(--gold);
       transform: translateY(-2px);
     }
 
     .hero-right {
-      background: var(--navy2);
-      border-left: 1px solid rgba(212,160,23,0.2);
+      background: var(--navy);
+      border-left: 1px solid rgba(192,57,43,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -311,7 +312,7 @@
       color: var(--gold);
       margin-bottom: 1.5rem;
       padding-bottom: 0.75rem;
-      border-bottom: 1px solid rgba(212,160,23,0.25);
+      border-bottom: 1px solid rgba(192,57,43,0.25);
     }
 
     .stat-row {
@@ -337,7 +338,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.45);
       text-align: right;
     }
 
@@ -361,8 +362,8 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
       letter-spacing: 0.15em;
-      color: var(--gold);
-      background: var(--navy);
+      color: var(--white);
+      background: var(--gold);
       padding: 0.3rem 0.7rem;
       font-weight: 500;
     }
@@ -383,11 +384,15 @@
 
     .sec-dark { background: var(--navy); }
     .sec-dark h2 { color: var(--white); }
-    .sec-dark .sec-num { background: var(--gold); color: var(--navy); }
-    .sec-dark .sec-rule { background: linear-gradient(90deg, rgba(212,160,23,0.6), transparent); }
+    .sec-dark .sec-num { background: var(--gold); color: var(--white); }
+    .sec-dark .sec-rule { background: linear-gradient(90deg, rgba(192,57,43,0.7), transparent); }
 
-    .sec-light { background: var(--light); }
-    .sec-cream { background: var(--cream); }
+    .award-card-pad {
+      padding-top: 1.8rem;
+    }
+    .sec-white h2 { color: var(--navy); }
+    .sec-white .sec-num { background: var(--gold); color: var(--white); }
+    .sec-white .sec-rule { background: linear-gradient(90deg, var(--gold), transparent); }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -403,17 +408,18 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 0.6rem 1.3rem;
-      border: 1.5px solid var(--gold);
-      color: var(--gold2);
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
       background: transparent;
       transition: all 0.22s;
     }
 
     .tag:hover {
       background: var(--gold);
-      color: var(--navy);
+      color: var(--white);
+      border-color: var(--gold);
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(212,160,23,0.3);
+      box-shadow: 0 8px 20px rgba(192,57,43,0.3);
     }
 
     /* ── PUBLICATIONS ── */
@@ -507,19 +513,20 @@
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2px;
-      background: rgba(212,160,23,0.2);
+      gap: 1.5rem;
+      background: transparent;
     }
 
     .edu-card {
-      background: var(--navy2);
+      background: #f9f9f9;
+      border: 1px solid var(--border);
       padding: 2.5rem;
       position: relative;
       overflow: hidden;
-      transition: background 0.2s;
+      transition: background 0.2s, box-shadow 0.2s;
     }
 
-    .edu-card:hover { background: var(--navy3); }
+    .edu-card:hover { background: var(--white); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
 
     .edu-card::after {
       content: '';
@@ -533,14 +540,14 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       font-weight: 900;
-      color: var(--gold2);
+      color: var(--gold);
       line-height: 1;
       margin-bottom: 0.3rem;
     }
 
     .edu-field {
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.55);
+      color: var(--muted);
       font-style: italic;
       margin-bottom: 1.2rem;
     }
@@ -550,20 +557,20 @@
       font-size: 0.68rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      color: var(--white);
+      color: var(--navy);
       margin-bottom: 0.8rem;
     }
 
     .edu-meta {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.62rem;
-      color: rgba(255,255,255,0.38);
+      color: var(--muted);
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
     }
 
-    .edu-gpa { color: var(--gold2) !important; }
+    .edu-gpa { color: var(--gold) !important; }
 
     /* ── EXPERIENCE ── */
     .exp-list { display: flex; flex-direction: column; }
@@ -579,7 +586,7 @@
     }
 
     .exp-row:first-child { border-top: 1px solid #d0d8e0; }
-    .exp-row:hover { background: rgba(212,160,23,0.05); }
+    .exp-row:hover { background: rgba(192,57,43,0.03); }
 
     .exp-date {
       font-family: 'JetBrains Mono', monospace;
@@ -607,20 +614,22 @@
     .awards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 2px;
-      background: rgba(212,160,23,0.15);
+      gap: 1.5rem;
+      background: transparent;
     }
 
     .award-card {
-      background: var(--navy2);
-      padding: 2rem 2rem 2rem 1.8rem;
-      border-left: 4px solid var(--gold);
-      transition: background 0.2s, border-color 0.2s;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 0 0 1.8rem 0;
+      border-top: 4px solid var(--gold);
+      transition: box-shadow 0.2s, transform 0.2s;
+      overflow: hidden;
     }
 
     .award-card:hover {
-      background: var(--navy3);
-      border-color: var(--gold2);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
     }
 
     .award-year {
@@ -630,23 +639,26 @@
       color: var(--gold);
       text-transform: uppercase;
       margin-bottom: 0.5rem;
+      padding: 0 1.8rem;
     }
 
     .award-name {
       font-family: 'Playfair Display', serif;
       font-size: 1rem;
       font-weight: 700;
-      color: var(--white);
+      color: var(--navy);
       line-height: 1.35;
       margin-bottom: 0.35rem;
+      padding: 0 1.8rem;
     }
 
     .award-org {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.6rem;
-      color: rgba(255,255,255,0.35);
+      color: var(--muted);
       letter-spacing: 0.07em;
       text-transform: uppercase;
+      padding: 0 1.8rem;
     }
 
     /* ── SKILLS ── */
@@ -666,10 +678,10 @@
 
     .skill:hover {
       background: var(--gold);
-      color: var(--navy);
+      color: var(--white);
       border-color: var(--gold);
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(212,160,23,0.3);
+      box-shadow: 0 8px 20px rgba(192,57,43,0.3);
     }
 
     /* ── REFERENCES ── */
@@ -729,7 +741,7 @@
 
     /* ── CONTACT ── */
     #contact {
-      background: var(--gold);
+      background: var(--navy);
       padding: 6rem 3.5rem;
       text-align: center;
     }
@@ -738,36 +750,36 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 900;
-      color: var(--navy);
+      color: var(--white);
       margin-bottom: 0.8rem;
     }
 
     #contact p {
       font-size: 1rem;
-      color: var(--navy);
-      opacity: 0.7;
+      color: rgba(255,255,255,0.6);
       font-style: italic;
       margin-bottom: 2.5rem;
     }
 
     .btn-navy {
       display: inline-block;
-      background: var(--navy);
-      color: var(--gold2);
+      background: var(--gold);
+      color: var(--white);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       padding: 0.9rem 2.2rem;
       text-decoration: none;
-      border: 2px solid var(--navy);
+      border: 2px solid var(--gold);
       transition: all 0.2s;
     }
 
     .btn-navy:hover {
       background: transparent;
-      color: var(--navy);
-      box-shadow: 0 8px 28px rgba(11,31,58,0.2);
+      color: var(--gold2);
+      border-color: var(--gold2);
+      box-shadow: 0 8px 28px rgba(192,57,43,0.3);
       transform: translateY(-2px);
     }
 
@@ -783,15 +795,14 @@
       font-size: 0.65rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--navy);
+      color: rgba(255,255,255,0.5);
       text-decoration: none;
-      opacity: 0.6;
-      border-bottom: 1px dashed rgba(11,31,58,0.4);
+      border-bottom: 1px dashed rgba(255,255,255,0.25);
       padding-bottom: 2px;
-      transition: opacity 0.2s;
+      transition: all 0.2s;
     }
 
-    .social-row a:hover { opacity: 1; }
+    .social-row a:hover { color: var(--gold2); border-bottom-color: var(--gold2); opacity: 1; }
 
     /* ── FOOTER ── */
     footer {
@@ -843,7 +854,7 @@
       object-fit: cover;
       object-position: center top;
       border-bottom: 3px solid var(--gold);
-      margin-bottom: 1.2rem;
+      margin-bottom: 0;
     }
 
     /* ── RESPONSIVE ── */
@@ -897,7 +908,7 @@
     <p class="hero-tagline">Bridging Finite Element Methods and Molecular Dynamics to advance non-Fourier thermal transport at the nanoscale.</p>
     <div class="hero-meta">
       <span>University of Utah · Salt Lake City, UT</span>
-      <span>Graduate Research Assistant — TIFT Lab</span>
+      <span>Graduate Research Assistant — Nano Heat Transfer Lab</span>
       <a href="mailto:u1477311@utah.edu">u1477311@utah.edu</a>
       <span>385-507-3244</span>
     </div>
@@ -936,7 +947,7 @@
 </section>
 
 <!-- RESEARCH INTERESTS -->
-<section id="interests" class="sec sec-dark">
+<section id="interests" class="sec sec-cream">
   <div class="sec-inner">
     <div class="sec-header">
       <span class="sec-num">01</span>
@@ -1015,7 +1026,7 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="sec sec-dark">
+<section id="education" class="sec sec-light">
   <div class="sec-inner">
     <div class="sec-header">
       <span class="sec-num">03</span>
@@ -1070,7 +1081,7 @@
         <div class="exp-date">Aug 2023 — Present</div>
         <div>
           <div class="exp-role">Graduate Research Assistant</div>
-          <div class="exp-org">TIFT Lab, University of Utah</div>
+          <div class="exp-org">Nano Heat Transfer Lab, University of Utah</div>
         </div>
       </div>
       <div class="exp-row">
@@ -1107,7 +1118,7 @@
 </section>
 
 <!-- AWARDS -->
-<section id="awards" class="sec sec-dark">
+<section id="awards" class="sec sec-cream">
   <div class="sec-inner">
     <div class="sec-header">
       <span class="sec-num">05</span>
@@ -1117,31 +1128,33 @@
     <div class="awards-grid">
       <div class="award-card">
         <img src="photo_award.png" alt="ASME SHTC 2025 Best Presentation Award" class="award-img">
+        <div style="padding:0 1.8rem">
         <div class="award-year">2025</div>
         <div class="award-name">HTD K-9 Track Best Presentation Award — SHTC 2025</div>
         <div class="award-org">ASME · Westminster, Colorado</div>
+        </div>
       </div>
-      <div class="award-card">
+      <div class="award-card" style="padding-top:1.8rem">
         <div class="award-year">2022</div>
         <div class="award-name">Award of Honours — CGPA above 3.75</div>
         <div class="award-org">BUET, Bangladesh</div>
       </div>
-      <div class="award-card">
+      <div class="award-card" style="padding-top:1.8rem">
         <div class="award-year">2018, 2021</div>
         <div class="award-name">Dean's List — Honours CGPA in Level</div>
         <div class="award-org">BUET, Bangladesh</div>
       </div>
-      <div class="award-card">
+      <div class="award-card" style="padding-top:1.8rem">
         <div class="award-year">2019</div>
         <div class="award-name">University Merit List Scholarship</div>
         <div class="award-org">Outstanding academic result — BUET</div>
       </div>
-      <div class="award-card">
+      <div class="award-card" style="padding-top:1.8rem">
         <div class="award-year">2018</div>
         <div class="award-name">2nd Position — Inter-University Poster Presentation</div>
         <div class="award-org">Mechanical Festival · BUET MEA</div>
       </div>
-      <div class="award-card">
+      <div class="award-card" style="padding-top:1.8rem">
         <div class="award-year">2018</div>
         <div class="award-name">1st Runner-up — Inter-University Poster Presentation</div>
         <div class="award-org">IPE Festival · KUET IPE Association</div>
@@ -1219,7 +1232,7 @@
 <!-- FOOTER -->
 <footer>
   <span>© 2026 Tanvirul Abedien · University of Utah</span>
-  <span>Mechanical Engineering · TIFT Lab</span>
+  <span>Mechanical Engineering · Nano Heat Transfer Lab</span>
 </footer>
 
 <script>
