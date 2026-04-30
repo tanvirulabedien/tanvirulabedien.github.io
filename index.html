@@ -808,6 +808,44 @@
       border-top: 2px solid var(--gold);
     }
 
+    /* ── PROFILE PHOTO ── */
+    .profile-photo-wrap {
+      margin-bottom: 2rem;
+      animation: fadeUp 0.7s 0.05s ease both;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 0 6px rgba(212,160,23,0.15), 0 12px 36px rgba(0,0,0,0.4);
+    }
+
+    /* ── EXP IMAGE ── */
+    .exp-img {
+      width: 100%;
+      max-width: 380px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid rgba(212,160,23,0.25);
+      margin-top: 0.9rem;
+      display: block;
+    }
+
+    /* ── AWARD IMAGE ── */
+    .award-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      object-position: center top;
+      border-bottom: 3px solid var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
       nav { padding: 0.8rem 1.5rem; }
@@ -850,6 +888,9 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
+    <div class="profile-photo-wrap">
+      <img src="photo_profile.png" alt="Tanvirul Abedien" class="profile-photo">
+    </div>
     <div class="hero-eyebrow"><span class="eyebrow-line"></span> PhD Researcher · Mechanical Engineering</div>
     <h1>TANVIRUL<br><em>ABEDIEN</em></h1>
     <div class="hero-divider"></div>
@@ -1037,6 +1078,7 @@
         <div>
           <div class="exp-role">Graduate Teaching Assistant</div>
           <div class="exp-org">Mechanical Engineering, University of Utah</div>
+          <img src="photo_teaching.png" alt="Teaching at University of Utah — FEM Results presentation" class="exp-img">
         </div>
       </div>
       <div class="exp-row">
@@ -1074,6 +1116,7 @@
     </div>
     <div class="awards-grid">
       <div class="award-card">
+        <img src="photo_award.png" alt="ASME SHTC 2025 Best Presentation Award" class="award-img">
         <div class="award-year">2025</div>
         <div class="award-name">HTD K-9 Track Best Presentation Award — SHTC 2025</div>
         <div class="award-org">ASME · Westminster, Colorado</div>
